@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <title>Application météo</title>
+</head>
+
+<body class="text-center">
+    <header class="container_fluid">
+        <div class="haut_page row align-items-center">
+            <div class="col-auto"><img class="logo float-" src="images/logo.png" alt="météo de votre ville">
+            </div>
+            <div class="col-md-auto col-sm-12">
+                <h1 class="text-dark">La météo de votre ville</h1>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <section class="input-group mb-3 pt-5 col-md-6 offset-md-3">
+            <input type="text" class="form-control" placeholder="Nom de la ville" aria-label="Nom de la ville"
+                aria-describedby="basic-addon2" id="ville">
+            <div class="input-group-append">
+                <button class="btn btn-warning" type="button" id="btnValider">Valider</button>
+            </div>
+        </section>
+        <section>
+            <header class="text-secondary p-5">
+                <h2>Prévisons météo pour :</h2>
+                <span id="recupVille" class="font-italic">Nom de la ville</span>
+            </header>
+            <section class="row justify-content-center m-2 pb-5">
+                <section class="col-auto p-3 m-3 bg-secondary text-white" id="bloc_1">
+                    <header>
+                        <h3><span class="date_jour">Aujourd'hui</span></h3>
+                        <h4><span class="heure">Heures</span></h4>
+                    </header>
+                    <img class="mb-3" src="images/jour_1.png" alt="météo jour 2">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-secondary">T°C min: <span class="temps_min_jour"></span>°</li>
+                        <li class="list-group-item bg-secondary">T°C max: <span class="temps_max_jour"></span>°</li>
+                        <li class="list-group-item bg-secondary">Vent: <span class="vitesse_vent_jour"></span>km/h</li>
+                        <li class="list-group-item bg-secondary">Nuageux: <span class="pourcentage_nuage_jour"></span>%</li>
+                    </ul>
+                </section>
+                <section class="col-auto bg-white p-3 m-3" id="bloc_2">
+                    <header>
+                        <h3><span class="date_jour">Jour</span></h3>
+                        <h4><span class="heure">Heures</span></h4>
+                    </header>
+                    <img class="mb-3" src="images/jour_2.png" alt="météo jour 2">
+                    <ul class="list-group list-group-flush ">
+                        <li class="list-group-item">T°C min: <span class="temps_min_jour"></span>°</li>
+                        <li class="list-group-item">T°C max: <span class="temps_max_jour"></span>°</li>
+                        <li class="list-group-item">Vent: <span class="vitesse_vent_jour"></span>km/h</li>
+                        <li class="list-group-item">Nuageux: <span class="pourcentage_nuage_jour"></span>%</li>
+                    </ul>
+                </section>
+                <section class="col-auto bg-white p-3 m-3" id="bloc_3">
+                    <header>
+                        <h3><span class="date_jour">Jour</span></h3>
+                        <h4><span class="heure">Heures</span></h4>
+                    </header>
+                    <img class="mb-3" src="images/jour_3.png" alt="météo jour 3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">T°C min: <span class="temps_min_jour"></span>°</li>
+                        <li class="list-group-item">T°C max: <span class="temps_max_jour"></span>°</li>
+                        <li class="list-group-item">Vent: <span class="vitesse_vent_jour"></span>km/h</li>
+                        <li class="list-group-item">Nuageux: <span class="pourcentage_nuage_jour"></span>%</li>
+                    </ul>
+                </section>
+                <section class="col-auto bg-white p-3 m-3" id="bloc_4">
+                    <header>
+                        <h3><span class="date_jour">Jour</span></h3>
+                        <h4><span class="heure">Heures</span></h4>
+                    </header>
+                    <img class="mb-3" src="images/jour_4.png" alt="météo jour 4">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">T°C min: <span class="temps_min_jour"></span>°</li>
+                        <li class="list-group-item">T°C max: <span class="temps_max_jour"></span>°</li>
+                        <li class="list-group-item">Vent: <span class="vitesse_vent_jour"></span>km/h</li>
+                        <li class="list-group-item">Nuageux: <span class="pourcentage_nuage_jour"></span>%</li>
+                    </ul>
+                </section>
+                <section class="col-auto bg-white p-3 m-3" id="bloc_5">
+                    <header>
+                        <h3><span class="date_jour">Jour</span></h3>
+                        <h4><span class="heure">Heures</span></h4>
+                    </header>
+                    <img class="mb-3" src="images/jour_5.png" alt="météo jour 5">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">T°C min: <span class="temps_min_jour"></span>°</li>
+                        <li class="list-group-item">T°C max: <span class="temps_max_jour"></span>°</li>
+                        <li class="list-group-item">Vent: <span class="vitesse_vent_jour"></span>km/h</li>
+                        <li class="list-group-item">Nuageux: <span class="pourcentage_nuage_jour"></span>%</li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+    </main>
+    <footer class="p-3 mt-4 bg-dark ">
+        <p><a href="#" class="text-white">Mentions Légales</a></p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
